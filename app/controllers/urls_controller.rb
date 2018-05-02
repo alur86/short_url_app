@@ -5,20 +5,24 @@ class UrlsController < ApplicationController
   # GET /urls.json
   def index
     @urls = Url.all
+    @users = User.all
   end
 
   # GET /urls/1
   # GET /urls/1.json
   def show
+  @users = User.all
   end
 
   # GET /urls/new
   def new
+    @users = User.all
     @url = Url.new
   end
 
   # GET /urls/1/edit
   def edit
+  @users = User.all
   end
 
   # POST /urls
