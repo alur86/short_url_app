@@ -29,6 +29,8 @@ class UrlsController < ApplicationController
   # POST /urls.json
   def create
     @url = Url.new(url_params)
+     @users = User.all
+
 
     respond_to do |format|
       if @url.save
