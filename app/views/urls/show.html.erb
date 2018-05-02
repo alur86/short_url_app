@@ -25,5 +25,14 @@
   <%= @url.expired_at %>
 </p>
 
+
+<p>
+  <strong>Share This URL:</strong>
+  <%= social_share_button_tag(@url.title) %>
+
+</p>
+
+
+
 <%= link_to 'Edit', edit_url_path(@url) %> |
 <%= link_to 'Back', urls_path %>

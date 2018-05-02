@@ -28,8 +28,14 @@
 
   <div class="field">
     <%= form.label :user_id %>
-    <%= form.collection_select (:user_id,  @users, :id, :email, :include_bank => "Please select user") %>
+    <%= form.number_field :user_id, id: :url_user_id %>
   </div>
+
+  <div class="field">
+    <%= form.label :expired_at %>
+    <%= form.datetime_select :expired_at, id: :url_expired_at %>
+  </div>
+
 
 
   <div class="actions">
